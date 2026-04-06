@@ -1,32 +1,93 @@
-import MetricCard from '../ui/MetricCard';
-
 export default function Hero() {
   return (
-    <section className="mb-24 pt-12">
-      <div className="mb-16">
-        <div className="flex items-center gap-2 mb-8 font-mono text-[10px] tracking-[0.2em] text-[#10b981] uppercase">
-          <span>{`~`}</span>
-          <span>System Online // Deployment V2.4.0</span>
+    <section id="home" className="flex flex-col border-b border-[#222] w-full">
+      <div className="flex flex-col lg:flex-row w-full">
+        <div className="hidden lg:flex flex-col items-center justify-between w-16 border-r border-[#222] py-8 text-[#555] font-mono text-[9px] tracking-widest shrink-0">
+          <div className="transform -rotate-90 whitespace-nowrap">v2.4.0_STABLE</div>
+          <div className="flex flex-col gap-8 text-[#888]">
+            <span>◳</span><span>◒</span><span>◰</span>
+          </div>
+          <div className="transform -rotate-90 whitespace-nowrap">2026_DEPLOY</div>
         </div>
 
-        <h1 className="text-5xl md:text-[4.5rem] font-bold leading-none tracking-tight mb-2 text-white">
-          Software Engineer
-        </h1>
-        <h1 className="text-5xl md:text-[4.5rem] font-bold leading-none tracking-tight text-[#4b5563] mb-8">
-          (Backend & Generative AI)
-        </h1>
+        <div className="flex-1 p-6 sm:p-8 lg:p-16 min-w-0">
+          <div className="flex items-center gap-2 mb-8 sm:mb-10 font-mono text-[10px] tracking-[0.2em] text-[#888] uppercase">
+            <span className="w-2 h-2 bg-[#4285f4] shrink-0"></span> SYSTEMS AVAILABILITY: 99.99%
+          </div>
+          {/* Added break-words to handle INFRASTRUCTURE on narrow screens */}
+          <h1 className="text-4xl sm:text-6xl lg:text-[5.5rem] font-bold leading-[1.1] sm:leading-[0.95] lg:leading-[0.9] tracking-tighter mb-8 text-white break-words">
+            BUILDING<br/>
+            <span className="text-[#4285f4]">PRODUCTION<br/>RAG</span><br/>
+            INFRASTRUCTURE.
+          </h1>
+          <p className="text-[#a3a3a3] text-sm sm:text-lg max-w-2xl leading-relaxed mb-10 sm:mb-12">
+            Software Engineer specializing in Backend and Generative AI. Focused on high-performance inference, vector search optimization, and scalable data pipelines using <strong className="text-white font-mono text-xs sm:text-sm bg-[#222] px-1">BGE-M3</strong> and <strong className="text-white font-mono text-xs sm:text-sm bg-[#222] px-1">pgVector</strong>.
+          </p>
 
-        <p className="text-[#9ca3af] text-lg max-w-2xl leading-relaxed mt-8">
-          Specializing in high-throughput <strong className="text-white font-medium">RAG pipelines</strong> (BGE-M3, pgVector, FastAPI) and
-          event-driven <strong className="text-white font-medium">microservices</strong> (PostgreSQL, RabbitMQ, AWS) with 5+ years of
-          production experience.
-        </p>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <div className="bg-[#161616] border-l-2 border-[#4285f4] p-5 sm:p-6 flex-1 min-w-0">
+              <div className="text-[#666] text-[8px] font-mono tracking-widest uppercase mb-2 truncate">PERFORMANCE BENCHMARKS</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">&lt;200ms <span className="text-xs sm:text-sm font-mono text-[#888] tracking-widest font-normal uppercase block sm:inline mt-1 sm:mt-0">P95 LATENCY</span></div>
+            </div>
+            <div className="bg-[#161616] border-l-2 border-[#d97757] p-5 sm:p-6 flex-1 min-w-0">
+              <div className="text-[#666] text-[8px] font-mono tracking-widest uppercase mb-2 truncate">SCALE THRESHOLD</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">10K+ <span className="text-xs sm:text-sm font-mono text-[#888] tracking-widest font-normal uppercase block sm:inline mt-1 sm:mt-0">DAILY TXNS</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full lg:w-[320px] bg-[#1a1a1a] border-t lg:border-t-0 lg:border-l border-[#222] p-8 lg:p-10 flex flex-col justify-between shrink-0">
+          <div>
+            <div className="text-[#666] text-[9px] font-mono tracking-[0.2em] uppercase mb-6">// CORE_CAPABILITIES</div>
+            <ul className="space-y-4 text-sm text-[#d4d4d4]">
+              <li className="flex items-center gap-3"><span className="text-[#4285f4] text-xs shrink-0">●</span> Event-Driven Microservices</li>
+              <li className="flex items-center gap-3"><span className="text-[#4285f4] text-xs shrink-0">●</span> RAG Pipeline Engineering</li>
+              <li className="flex items-center gap-3"><span className="text-[#4285f4] text-xs shrink-0">●</span> Cloud Infrastructure (AWS)</li>
+            </ul>
+            <div className="text-[#666] text-[9px] font-mono tracking-[0.2em] uppercase mt-10 sm:mt-12 mb-4">// EXPERIENCE_LOG</div>
+            <div className="text-4xl font-bold text-white flex items-end gap-2">
+              05+ <span className="text-[10px] font-mono text-[#888] tracking-[0.1em] uppercase leading-tight mb-1">YEARS IN<br/>PRODUCTION</span>
+            </div>
+          </div>
+          <div className="mt-10 sm:mt-12 flex flex-col gap-3">
+            <a href="#projects" className="bg-[#4285f4] text-[#111] text-[10px] font-bold py-4 px-4 w-full tracking-[0.2em] uppercase flex justify-between items-center hover:bg-[#3b77db] transition-colors">
+              VIEW_PROJECTS <span>→</span>
+            </a>
+            <a href="/kunal_sengupta_resume_v4.pdf" download="Kunal_Sengupta_Resume.pdf" target="_blank" rel="noopener noreferrer" className="border border-[#333] text-white text-[10px] font-bold py-4 px-4 w-full tracking-[0.2em] uppercase flex justify-between items-center hover:bg-[#222] transition-colors">
+              DOWNLOAD_CV <span>↓</span>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <MetricCard metric="Sub-200ms" label="P95 Latency for Appx OS RAG" />
-        <MetricCard metric="100%" label="Deterministic Schema Blocking" />
-        <MetricCard metric="10K+" label="Daily Transactions for Fintech" />
+      <div className="border-t border-[#222] flex flex-col lg:flex-row bg-[#111] w-full">
+        <div className="p-6 sm:p-8 lg:w-1/2 border-b lg:border-b-0 lg:border-r border-[#222] flex items-start sm:items-center gap-4 sm:gap-6 min-w-0">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 bg-[#1a1a1a] border border-[#333] flex items-center justify-center text-[#444] text-xl sm:text-2xl mt-1 sm:mt-0">⚡</div>
+          <div className="min-w-0">
+            <div className="text-white text-sm sm:text-base font-bold mb-1 truncate">EdTech RAG Pipeline</div>
+            <div className="text-[#888] text-[10px] sm:text-xs mb-3 truncate">Semantic retrieval using BGE-M3 + pgVector</div>
+            {/* Added flex-wrap here */}
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-[#222] text-[#888] px-2 py-0.5 text-[8px] font-mono uppercase">FASTAPI</span>
+              <span className="bg-[#222] text-[#888] px-2 py-0.5 text-[8px] font-mono uppercase">PGVECTOR</span>
+              <span className="bg-[#222] text-[#888] px-2 py-0.5 text-[8px] font-mono uppercase">PYTHON</span>
+            </div>
+          </div>
+        </div>
+        <div className="p-6 sm:p-8 lg:w-1/2 grid grid-cols-2 sm:flex sm:items-center sm:justify-around gap-6 sm:gap-0">
+          <div className="text-center sm:text-left">
+            <div className="text-white text-xl sm:text-2xl font-bold mb-1">&lt;200ms</div>
+            <div className="text-[#666] text-[8px] font-mono tracking-widest uppercase">P95_LATENCY</div>
+          </div>
+          <div className="text-center sm:text-left">
+            <div className="text-white text-xl sm:text-2xl font-bold mb-1">92%</div>
+            <div className="text-[#666] text-[8px] font-mono tracking-widest uppercase">RETRIEVAL_ACC</div>
+          </div>
+          <div className="text-center sm:text-left col-span-2 sm:col-span-1 mt-2 sm:mt-0">
+            <div className="text-white text-xl sm:text-2xl font-bold mb-1">50K+</div>
+            <div className="text-[#666] text-[8px] font-mono tracking-widest uppercase">DOCUMENTS</div>
+          </div>
+        </div>
       </div>
     </section>
   );
