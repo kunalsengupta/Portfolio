@@ -17,11 +17,11 @@ export default function Projects() {
                 <span className="bg-[#4285f4] text-[#111] px-2 py-0.5 text-[8px] font-bold tracking-widest uppercase shrink-0">MISSION CRITICAL</span>
                 <span className="text-[#666] text-[9px] font-mono tracking-widest uppercase shrink-0">VER_4.02</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white truncate">SchemaGuard API</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white truncate">smartSchema</h3>
             </div>
             <div className="text-left sm:text-right shrink-0">
               <div className="text-2xl sm:text-3xl font-bold text-white font-mono">01</div>
-              <a href="https://github.com/kunalsengupta/schemaguard" target="_blank" rel="noreferrer" className="text-[#888] hover:text-white text-[8px] font-mono tracking-widest uppercase flex items-center gap-1 mt-1 transition-colors">SOURCE_LOGS ↗</a>
+              <a href="https://github.com/kunalsengupta/smartSchema" target="_blank" rel="noreferrer" className="text-[#888] hover:text-white text-[8px] font-mono tracking-widest uppercase flex items-center gap-1 mt-1 transition-colors">SOURCE_LOGS ↗</a>
             </div>
           </div>
           <p className="text-[#a3a3a3] text-sm leading-relaxed mb-8 max-w-xl">
